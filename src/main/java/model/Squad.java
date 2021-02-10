@@ -1,8 +1,7 @@
 package model;
 
-import model.person.Solider;
-
 import java.util.List;
+import model.person.Solider;
 
 public class Squad {
     private Long id;

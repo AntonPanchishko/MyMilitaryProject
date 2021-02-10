@@ -1,6 +1,9 @@
 package model.person;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
 /*@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)*/

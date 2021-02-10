@@ -1,8 +1,7 @@
 package service;
 
-import model.person.Person;
-
 import java.util.List;
+import model.person.Person;
 
 public interface PersonService {
     void add(Person person);

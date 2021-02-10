@@ -1,12 +1,11 @@
 package service.impl;
 
 import dao.PersonDao;
+import java.util.List;
 import model.person.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import service.PersonService;
-
-import java.util.List;
 
 @Service
 public class PersonServiceImpl implements PersonService {

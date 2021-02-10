@@ -2,9 +2,7 @@ package config;
 
 import java.util.Properties;
 import javax.sql.DataSource;
-
 import model.person.Person;
-
 import model.person.Solider;
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.springframework.beans.factory.annotation.Autowired;

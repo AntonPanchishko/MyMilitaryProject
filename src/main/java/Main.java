@@ -6,13 +6,14 @@ import service.PersonService;
 
 public class Main {
     public static void main(String[] args) {
-        AnnotationConfigApplicationContext context =
-                new AnnotationConfigApplicationContext(AppConfig.class);
-        PersonService personService = context.getBean(PersonService.class);
+
         Person petrov = new Person();
         petrov.setMilitaryRank("Solider");
         petrov.setName("Ivan");
         petrov.setSurname("Petrov");
+        AnnotationConfigApplicationContext context =
+                new AnnotationConfigApplicationContext(AppConfig.class);
+        PersonService personService = context.getBean(PersonService.class);
         personService.add(petrov);
 
         Solider ivanov = new Solider();

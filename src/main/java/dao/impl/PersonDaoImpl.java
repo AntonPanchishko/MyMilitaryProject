@@ -1,7 +1,7 @@
 package dao.impl;
 
-import model.person.Person;
 import java.util.List;
+import model.person.Person;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;

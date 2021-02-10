@@ -1,8 +1,7 @@
 package model.warehouse;
 
-import model.wepon.Patron;
-
 import java.util.List;
+import model.wepon.Patron;
 
 public class PatronWarehouse {
     private Long id;
