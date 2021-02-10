@@ -1,4 +1,5 @@
 import config.AppConfig;
+import model.person.Officer;
 import model.person.Person;
 import model.person.Solider;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -23,5 +24,11 @@ public class Main {
         ivanov.setSurname("Ivanov");
         personService.add(ivanov);
 
+        Officer officer = new Officer();
+        officer.setMilitaryRank("Capitan");
+        officer.setName("Yurii");
+        officer.setSurname("Pupkin");
+        officer.setSalary(25000L);
+        personService.add(officer);
     }
 }
