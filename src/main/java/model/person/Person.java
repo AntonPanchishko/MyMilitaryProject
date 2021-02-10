@@ -4,16 +4,17 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 
 @Entity
-/*@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)*/
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Person {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.TABLE)
     private Long id;
     private String name;
     private String surname;
-    private String militaryRank;
 
     public Long getId() {
         return id;
@@ -37,13 +38,5 @@ public class Person {
 
     public void setSurname(String surname) {
         this.surname = surname;
-    }
-
-    public String getMilitaryRank() {
-        return militaryRank;
-    }
-
-    public void setMilitaryRank(String militaryRank) {
-        this.militaryRank = militaryRank;
     }
 }

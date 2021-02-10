@@ -2,8 +2,8 @@ package config;
 
 import java.util.Properties;
 import javax.sql.DataSource;
+import model.person.Officer;
 import model.person.Person;
-import model.person.Solider;
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -39,9 +39,9 @@ public class AppConfig {
     public LocalSessionFactoryBean getSessionFactory() {
         LocalSessionFactoryBean factoryBean = new LocalSessionFactoryBean();
         factoryBean.setDataSource(getDataSource());
+        factoryBean.setPackagesToScan("model.person");
         factoryBean.setAnnotatedClasses(Person.class);
-        factoryBean.setAnnotatedClasses(Solider.class);
-        /*factoryBean.setAnnotatedClasses(SquadCommander.class);*/
+        factoryBean.setAnnotatedClasses(Officer.class);
 
         Properties properties = new Properties();
         properties.put("hibernate.show_sql", env.getProperty("hibernate.show_sql"));
